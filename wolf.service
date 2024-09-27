@@ -1,0 +1,12 @@
+[Unit]
+Description=Wolf service
+After=network.target
+
+[Service]
+ExecStart=%h/Repos/wolf/wolf
+WorkingDirectory=%h/Repos/wolf
+Restart=on-failure
+RestartSec=60s
+
+[Install]
+WantedBy=default.target
